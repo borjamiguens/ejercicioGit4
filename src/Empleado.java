@@ -2,16 +2,16 @@ import java.util.Date;
 
 class Empleado {
     final String nombre;
-    Date birthDate;
+    int edad;
+    final Date fechaContratacion;
 
-    Empleado(String name, Date birthDate) {
-        this.nombre = name;
-        this.birthDate = birthDate;
+    public Empleado(String nombre, int edad, Date fechaContratacion) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.fechaContratacion = fechaContratacion;
     }
-
     @Override
     public String toString() {
-        return "Empleado: " + nombre + " (nacido en 19" + birthDate.getYear() + ")";
+        return "Se ha registrado a " + nombre + " (" + edad + " años; contratado en 19" + fechaContratacion.getYear() + ")";
     }
-
 }
